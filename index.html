@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2016 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+<head>
+    <title>Attempt to use blurring and facial recognition for more efficient P2P transfers</title>
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../css/main.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+
+<div id="container">
+    
+    <h1>
+       Compression using face detection Demo
+    </h1>
+
+    <canvas></canvas>
+    <video playsinline autoplay id="result"></video>
+   
+    <video onplay="recognize_face()" id="hidden"  autoplay playsinline></video>
+    <h2>Options</h2>
+    <input type="checkbox" id="compress">
+    <label for="compress"> Blur background</label><br>
+    <input type="checkbox" id="hidebg">
+    <label for="hidebg"> Hide background</label><br>
+    <h2>Stats</h2>
+    <p>Bitrate: <span id="bitrate">0 kbps</span></p>
+</div>
+
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="js/FastBlur.js"></script>
+<script src="js/faceapi.js"></script>
+<!--<script src="js/codec.js"></script>-->
+<script src="js/ai.js" async></script>
+<script src="js/main.js" async></script>
+<script src="js/webcam.js" async></script>
+<script src="js/stats.js" async></script>
+</body>
+</html>
