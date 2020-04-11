@@ -20,18 +20,18 @@
 <div id="container">
     
     <h1>
-       Compression using face detection Demo
+       Efficient P2P video conferencing using facial landmark transfer <br />
+       AKA Facehugger
     </h1>
 
-    <canvas></canvas>
+    <canvas id="output"></canvas>
     <video playsinline autoplay id="result"></video>
    
     <video onplay="recognize_face()" id="hidden"  autoplay playsinline></video>
+    <canvas id="buffer"></canvas>
     <h2>Options</h2>
-    <input type="checkbox" id="compress">
-    <label for="compress"> Blur background</label><br>
-    <input type="checkbox" id="hidebg">
-    <label for="hidebg"> Hide background</label><br>
+    <input type="checkbox" id="debug">
+    <label for="compress"> Draw landmarks</label><br>
     <h2>Stats</h2>
     <p>Bitrate: <span id="bitrate">0 kbps</span></p>
 </div>

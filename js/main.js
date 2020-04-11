@@ -40,7 +40,7 @@ video.onresize = () => {
 // Call main() to animate
 //main();
 
-const stream = canvas.captureStream();
+const stream = canvas.captureStream(1);
 //console.log('Got stream from canvas');
 
 call();
@@ -84,12 +84,12 @@ function call() {
     //to get a full list, comment out the setCodecPreferences line, and run
     //pc1.getSenders()[0].getParameters()
     //and look at the codecs
-    transceiver.setCodecPreferences([{
+    /*transceiver.setCodecPreferences([{
         clockRate: 90000,
         mimeType: "video/H264",
         payloadType: 125,
         sdpFmtpLine: "packetization-mode=1;profile-level-id=42e01f;level-asymmetry-allowed=1"
-    }])
+    }])*/
   pc1.createOffer(onCreateOfferSuccess, onCreateSessionDescriptionError, offerOptions);
 }
 
